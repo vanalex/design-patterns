@@ -1,7 +1,14 @@
-package org.example.factory;
+package org.example.factory.pizza;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.util.ArrayList;
 
+@Getter
+@SuperBuilder
 public abstract class Pizza {
 
     String name;
