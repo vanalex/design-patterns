@@ -6,6 +6,7 @@ import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @SuperBuilder
@@ -14,7 +15,7 @@ public abstract class Pizza {
     String name;
     String dough;
     String sauce;
-    ArrayList toppings = new ArrayList();
+    List<String> toppings = new ArrayList();
 
     public String getName() {
         return name;
