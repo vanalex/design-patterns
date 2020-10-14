@@ -1,4 +1,4 @@
-package org.example.factory.pizza;
+package org.example.factory.pizzas;
 
 public class PizzaFactory {
 

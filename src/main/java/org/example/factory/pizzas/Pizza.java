@@ -1,8 +1,6 @@
-package org.example.factory.pizza;
+package org.example.factory.pizzas;
 
-import lombok.Data;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import java.util.ArrayList;
@@ -12,10 +10,10 @@ import java.util.List;
 @SuperBuilder
 public abstract class Pizza {
 
-    String name;
-    String dough;
-    String sauce;
-    List<String> toppings = new ArrayList();
+    private String name;
+    private String dough;
+    private String sauce;
+    List<String> toppings = new ArrayList<>();
 
     public String getName() {
         return name;

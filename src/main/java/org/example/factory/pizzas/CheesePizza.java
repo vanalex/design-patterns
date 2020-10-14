@@ -1,4 +1,4 @@
-package org.example.factory.pizza;
+package org.example.factory.pizzas;
 
 import lombok.Getter;
 import lombok.experimental.SuperBuilder;

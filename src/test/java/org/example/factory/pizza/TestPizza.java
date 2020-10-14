@@ -1,8 +1,7 @@
-package org.example.pizza;
+package org.example.factory.pizza;
 
-import org.example.factory.pizza.Pizza;
-import org.example.factory.pizza.PizzaFactory;
-import org.example.factory.pizza.VeggiePizza;
+import org.example.factory.pizzas.Pizza;
+import org.example.factory.pizzas.PizzaFactory;
 import org.junit.Test;
 
 import java.util.List;
