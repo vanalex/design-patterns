@@ -9,7 +9,7 @@ import java.util.List;
 @SuperBuilder
 public class ChicagoStyleClamPizza extends Pizza{
 
-    public static ChicagoStyleClamPizza builPizza(){
+    public static ChicagoStyleClamPizza buildPizza(){
         return ChicagoStyleClamPizza.builder()
         .name("Chicago Style Clam Pizza")
         .dough("Extra Thick Crust Dough")
