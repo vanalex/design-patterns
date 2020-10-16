@@ -24,5 +24,13 @@ public class TestFactory {
         assertThat(pizza.getDough()).isEqualTo("Extra Thick Crust Dough");
         assertThat(pizza.getSauce()).isEqualTo("Plum Tomato Sauce");
         assertThat(pizza.getToppings()).isEqualTo(List.of("Shredded Mozzarella Cheese","Frozen Clams from Chesapeake Bay"));
+
+        store = new NewYorkPizzaStore();
+        pizza = store.orderPizza("cheese");
+        assertThat(pizza).isNotNull();
+        assertThat(pizza.getName()).isEqualTo("NY Style Sauce and Cheese Pizza");
+        assertThat(pizza.getDough()).isEqualTo("Thin Crust Dough");
+        assertThat(pizza.getSauce()).isEqualTo("Marinara Sauce");
+        assertThat(pizza.getToppings()).isEqualTo(List.of("Grated Reggiano Cheese"));
     }
 }
