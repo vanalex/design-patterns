@@ -1,4 +1,4 @@
-package org.example.template;
+package org.example.template.simplebarista;
 
 public class Tea {
 
