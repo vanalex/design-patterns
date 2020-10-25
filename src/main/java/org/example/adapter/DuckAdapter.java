@@ -5,7 +5,7 @@ public class DuckAdapter implements Turkey{
     private Duck duck;
 
     public DuckAdapter(Duck duck){
-        duck = duck;
+        this.duck = duck;
     }
 
     @Override
