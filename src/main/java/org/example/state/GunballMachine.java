@@ -16,7 +16,7 @@ public class GunballMachine {
         this.state = state;
     }
 
-    private GunballMachine(int numberOfBalls, State state){
+    public GunballMachine(int numberOfBalls, State state){
         this.count = numberOfBalls;
         this.state = state;
     }
@@ -24,4 +24,14 @@ public class GunballMachine {
     public static GunballMachine resetGunballMachine(){
         return new GunballMachine(MAX_NUMBER_OF_BALL, State.HAS_QUARTER);
     }
+
+    public State getState() {
+        return state;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+
 }
