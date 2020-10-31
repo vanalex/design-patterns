@@ -1,9 +1,7 @@
 package org.example.state;
 
 public class GunballMachine {
-    private final static int MAX_NUMBER_OF_BALL = 10;
     private State state;
-    private int count;
 
     private GunballMachine(){}
 
@@ -11,27 +9,19 @@ public class GunballMachine {
         return new GunballMachine(State.HAS_QUARTER);
     }
 
-    private GunballMachine(State state){
-        this.count = MAX_NUMBER_OF_BALL;
+    public GunballMachine(State state){
         this.state = state;
     }
 
-    public GunballMachine(int numberOfBalls, State state){
-        this.count = numberOfBalls;
+    public void changeState(State state){
         this.state = state;
     }
 
     public static GunballMachine resetGunballMachine(){
-        return new GunballMachine(MAX_NUMBER_OF_BALL, State.HAS_QUARTER);
+        return new GunballMachine( State.HAS_QUARTER);
     }
 
     public State getState() {
         return state;
     }
-
-    public int getCount() {
-        return count;
-    }
-
-
 }
