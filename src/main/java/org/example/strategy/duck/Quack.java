@@ -1,4 +1,4 @@
-package org.example.strategy;
+package org.example.strategy.duck;
 
 public class Quack implements QuackBehaviour{
     @Override

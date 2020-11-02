@@ -1,4 +1,4 @@
-package org.example.strategy;
+package org.example.strategy.duck;
 
 public class ModelDuck extends Duck{
 
