@@ -48,4 +48,18 @@ public class StrategyTest {
         String[] result = splitter.split("a,a");
         assertThat(result.length).isEqualTo(2);
     }
+
+    @Test
+    public void testGivenStringWithSpaceWithCommaSeparatorWhenSplittingThenResultShouldBeOne(){
+        SplitterStrategy splitter = new CommaSplitter();
+        String[] result = splitter.split("a a");
+        assertThat(result.length).isEqualTo(1);
+    }
+
+    @Test
+    public void testGivenStringasBlankWithCommaSeparatorWhenSplittingThenResultShouldBeOne(){
+        SplitterStrategy splitter = new CommaSplitter();
+        String[] result = splitter.split("");
+        assertThat(result.length).isEqualTo(1);
+    }
 }
