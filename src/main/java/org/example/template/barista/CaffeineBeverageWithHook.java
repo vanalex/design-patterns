@@ -1,14 +1,14 @@
 package org.example.template.barista;
 
+import java.util.Random;
+
 public abstract class CaffeineBeverageWithHook {
 
     void prepareRecipe() {
         boilWater();
         brew();
         pourInCup();
-        if (customerWantsCondiments()) {
-            addCondiments();
-        }
+        addCondiments();
     }
 
     abstract void brew();
@@ -21,9 +21,5 @@ public abstract class CaffeineBeverageWithHook {
 
     void pourInCup() {
         System.out.println("Pouring into cup");
-    }
-
-    boolean customerWantsCondiments() {
-        return true;
     }
 }
