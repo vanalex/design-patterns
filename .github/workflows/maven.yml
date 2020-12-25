@@ -1,0 +1,24 @@
+name: Build Maven Projects
+on: [push, pull_request]
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        versions: [1.8, 11, 15]
+    runs-on: ubuntu-20.04
+    name: Build Java ${{ matrix.versions }} projects
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-jdk${{ matrix.versions }}-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-jdk${{ matrix.versions }}-
+      - name: Set up JDK ${{ matrix.versions }}
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.versions }}
+      - name: Build all projects with Maven
+        run: ./buildJdk${{ matrix.versions }}Projects.sh
