@@ -1,7 +1,5 @@
 package org.example.template.barista;
 
-import java.util.Random;
-
 public abstract class CaffeineBeverageWithHook {
 
     void prepareRecipe() {
