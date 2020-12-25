@@ -5,7 +5,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        versions: [1.8, 11, 15]
+        versions: [11]
     runs-on: ubuntu-20.04
     name: Build Java ${{ matrix.versions }} projects
     steps:
@@ -21,4 +21,4 @@ jobs:
         with:
           java-version: ${{ matrix.versions }}
       - name: Build all projects with Maven
-        run: ./buildJdk${{ matrix.versions }}Projects.sh
+        #run: ./buildJdk${{ matrix.versions }}Projects.sh
