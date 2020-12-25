@@ -1,11 +1,18 @@
-steps:
-  - uses: actions/checkout@v2
-  - uses: actions/setup-java@v1
-    with:
-      java-version: '11' # The JDK version to make available on the path.
-      java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
-      architecture: x64 # (x64 or x86) - defaults to x64
-on:
-  push:
-    branches:
-      - master
+name: Build sample Java Maven project
+
+on: [push, pull_request]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: [ 11, 12, 13 ]
+    name: Java ${{ matrix.java }} compile
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup java
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java }}
+      - run: mvn -f github-actions-java-maven/pom.xml clean compile
